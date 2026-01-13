@@ -1,4 +1,5 @@
 import { Category, TransactionType } from "@prisma/client";
+import prisma from "../config/prisma";
 
 type GlobalCategoryInput = Pick<Category, "name" | "color" | "type">;
 
@@ -23,5 +24,25 @@ const globalCategories: GlobalCategoryInput[] = [
 export const initializeGlobalCategories = async (): Promise<Category[]> => {
   const createdCategories: Category[] = [];
 
+  for (const category of globalCategories) {
+    try {
+      const existing = await prisma.category.findFirst({
+        where: {
+          name: category.name,
+          type: category.type,
+        },
+      });
+
+      if (!existing) {
+        const newCategory = await prisma.category.create({ data: category });
+        createdCategories.push(newCategory);
+      } else {
+        createdCategories.push(existing);
+      }
+    } catch (err) {
+      console.error(`Error creating category ${category.name}:`, err);
+    }
+  }
+  console.log(`Initialized ${createdCategories.length} global categories.`);
   return createdCategories;
 };
