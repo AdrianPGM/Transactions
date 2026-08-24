@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+# 💰 Transactions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida com **React, TypeScript e Vite**, criada para praticar o desenvolvimento de interfaces utilizando tipagem estática e uma estrutura moderna de projeto.
 
-Currently, two official plugins are available:
+O projeto faz parte da minha evolução no desenvolvimento Front-end e representa uma etapa de aprofundamento em **TypeScript**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologias
 
-## React Compiler
+* React
+* TypeScript
+* Vite
+* ESLint
+* HTML5
+* CSS3
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 Objetivos do projeto
 
-## Expanding the ESLint configuration
+Este projeto foi desenvolvido com foco em:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* praticar React com TypeScript;
+* trabalhar com tipagem estática;
+* organizar uma aplicação Front-end moderna;
+* utilizar Vite como ferramenta de desenvolvimento;
+* aplicar boas práticas de desenvolvimento e organização de código.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📁 Estrutura
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+Transactions/
+├── public/
+├── src/
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── eslint.config.js
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ▶️ Como executar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Pré-requisitos
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Node.js
+* npm ou Yarn
+
+### Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/AdrianPGM/Transactions.git
 ```
+
+Entre na pasta:
+
+```bash
+cd Transactions
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie o projeto:
+
+```bash
+npm run dev
+```
+
+A aplicação estará disponível no endereço informado pelo Vite no terminal.
+
+## 📸 Preview
+
+**Em fase final.**
+
+## 📚 O que estou praticando
+
+Este projeto faz parte do meu processo de evolução como desenvolvedor e tem como principal foco o uso de **TypeScript junto ao React**.
+
+## 🔗 Repositório
+
+https://github.com/AdrianPGM/Transactions
+
+## 👨‍💻 Autor
+
+**Adrian Matheus**
+
+GitHub: https://github.com/AdrianPGM
+
+LinkedIn: https://www.linkedin.com/in/adrian-matheus/
